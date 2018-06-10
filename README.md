@@ -24,6 +24,8 @@ Some bit manipulation techniques/tricks seem useful to implement in my code, so 
 1 0 0 0 <-- result of multiplication
 ```
 
+---
+
 | Bitwise OR
 ```
 1 0 1 0
@@ -31,6 +33,8 @@ Some bit manipulation techniques/tricks seem useful to implement in my code, so 
 -------
 1 0 1 0 <-- 1 if any of the pair above is 1 else 0
 ```
+
+---
 
 ^ Bitwise XOR
 ```
@@ -40,6 +44,8 @@ Some bit manipulation techniques/tricks seem useful to implement in my code, so 
 0 1 1 0 <-- 1 if only one of the pair above is 1 else 0
 ```
 
+---
+
 ~ Bitwise NOT
 ```
 ~ 1 0
@@ -47,17 +53,25 @@ Some bit manipulation techniques/tricks seem useful to implement in my code, so 
 TODO
 ```
 
+---
+
 \<\< left shift
 ```
 TODO
 ```
+
+---
 
 \>\> right shift
 ```
 TODO
 ```
 
+---
+
 \>\>\> unsigned right shift
 ```
 TODO
 ```
+
+---
