@@ -48,9 +48,9 @@ Some bit manipulation techniques/tricks seem useful to implement in my code, so 
 
 ~ Bitwise NOT
 ```
-~ 1 0
-
-TODO
+~ 1 1 1 1 0 0 1 0 1 0 0 1 1 1
+------------------------------- 
+  0 0 0 0 1 1 0 1 0 1 1 0 0 0   flip all the bits; 1's become 0's and vice versa
 ```
 
 ---
