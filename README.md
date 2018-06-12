@@ -57,21 +57,32 @@ TODO
 
 \<\< left shift
 ```
-TODO
+<<
+
+110 << 3
+move 3 positions left
+---------------------
+      1 1 0
+    1 1 0 0 1st shift
+  1 1 0 0 0 2nd shift
+1 1 0 0 0 0 3rd shift
 ```
 
 ---
 
 \>\> right shift
 ```
-TODO
+111001 >> 3
+move 3 positions right
+            | ignore these
+------------|----------------
+1 1 1 0 0 1 |
+  1 1 1 0 0 | 1     1st shift
+    1 1 1 0 | 0 1   2nd shift
+      1 1 1 | 0 0 1 3rd shift
+      1 1 1 | final value
+            |
 ```
 
 ---
 
-\>\>\> unsigned right shift
-```
-TODO
-```
-
----
