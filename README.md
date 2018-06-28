@@ -107,3 +107,12 @@ In JavaScript, there is a function for arrays, `indexOf(element)` which returns 
 ~-1 == 0 // 0 is false
 ~n != 0 // where n != -1; any number not equal to 0 is true
 ```
+
+### negative, 0, positive values to 0,1, or 2
+Suppose you have an array of 3 colours `[red, white, green]` and given a value n, you want the colour:
+
+* red if n is negative (index 0)
+* white if n is 0 (index 1)
+* green if n is positive (index 2)
+
+To get the correct index we can use this formula `1 + (n >> 31) - (-n >> 31)`. This assumes n is a 32-bit integer, otherwise this trick may not work. `n >> 31` will evaluate to -1 if n is negative otherwise it will evaluate to 0.
