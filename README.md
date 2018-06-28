@@ -86,3 +86,24 @@ move 3 positions right
 
 ---
 
+
+
+
+
+
+
+
+
+
+
+
+
+# Tricks
+
+### Truthy indexOf
+In JavaScript, there is a function for arrays, `indexOf(element)` which returns the index of the element in the array if it exists, otherwise it returns -1. We can use the bitwise NOT operator to make the value returned by this function truthy.
+
+```js
+~-1 == 0 // 0 is false
+~n != 0 // where n != -1; any number not equal to 0 is true
+```
