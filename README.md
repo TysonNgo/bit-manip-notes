@@ -100,6 +100,44 @@ move 3 positions right
 
 # Tricks
 
+## &
+### bitwise enum
+| ... | 1   | 1   | 1   | 1   | 1   | 1   | 1   |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| ... | 64  | 32  | 16  | 8   | 4   | 2   | 1   |
+
+Suppose we wanted to store the characteristics of food such as sour, sweet, salty, and spicy.
+
+We can store these characteristics in an unsigned integer where each bit value represents a different characteristic.
+
+```
+// Example
+binary  | decimal | characteristic
+--------o---------o----------------
+      1 | 1       | sour
+    1 0 | 2       | sweet
+  1 0 0 | 4       | salty
+1 0 0 0 | 8       | spicy
+```
+
+So if we wanted the characteristic sweet and sour, we can add the values of the characteristics. ie. 1 + 2 = 3 (0b11)
+
+To figure out which characteristics that the food contains, we can make use of the bitwise AND operator. Comparing the food's characteristic value with the value of the characteristic. If the result is equal to the value of the characteristic then the food contains that characteristic, otherwise it does not contain that characteristic.
+
+```
+// Example
+sweet and sour = 3 (0b11)
+sweet = 2 (0b10)
+sour = 1 (0b1)
+salty = 4 (0b100)
+
+3 & 2 == 2 (0b10) √ is sweet
+3 & 1 == 1 (0b1)  √ is sour
+3 & 4 == 0 (0b0)  x is not salty
+```
+
+## ~
+
 ### Truthy indexOf
 In JavaScript, there is a function for arrays, `indexOf(element)` which returns the index of the element in the array if it exists, otherwise it returns -1. We can use the bitwise NOT operator to make the value returned by this function truthy.
 
@@ -107,6 +145,8 @@ In JavaScript, there is a function for arrays, `indexOf(element)` which returns 
 ~-1 == 0 // 0 is false
 ~n != 0 // where n != -1; any number not equal to 0 is true
 ```
+
+## >>
 
 ### negative, 0, positive values to 0,1, or 2
 Suppose you have an array of 3 colours `[red, white, green]` and given a value n, you want the colour:
