@@ -146,6 +146,18 @@ In JavaScript, there is a function for arrays, `indexOf(element)` which returns 
 ~n != 0 // where n != -1; any number not equal to 0 is true
 ```
 
+### Mirrored Index Access
+In Python, you can access elements in a list using negative indexes, where -n = len-n. Knowing this, we can utilize bit negation on the index i, if we want the element on the opposite side of the list.
+
+```python
+         i        ~i
+         v         v
+a = [1,2,3,4,5,6,7,8,9,10]
+i = 2
+print (a[i], a[~i])
+>>> 3 8
+```
+
 ## >>
 
 ### negative, 0, positive values to 0,1, or 2
